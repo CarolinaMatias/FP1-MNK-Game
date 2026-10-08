@@ -1,20 +1,51 @@
-# **Jogo MNK 🎮**
+# FP2425P1 - ist1114295
 
+Projeto de **Fundamentos da Programação (FP)**.
 
-1º projeto de fundamentos da programação
+## Estrutura
 
-*Realizado por: Carolina Matias*
+O repositório deve conter apenas:
 
-***
-1️⃣ **Descrição do projeto**
+```text
+FP2425P1.py
+README.md
+```
 
-Este projeto implementa um jogo do tipo m-n-k, onde o objetivo é alinhar k peças consecutivas num tabuleiro de dimensões m x n. O jogo foi projetado para ser jogado entre um jogador humano e um computador.
+A solução do projeto deve estar **inteiramente no ficheiro `FP2425P1.py`**.
 
-O projeto inclui funcionalidades que permitem:
+## Submissão
 
-1. Configurar o tamanho do tabuleiro (m linhas por n colunas);
-2. Definir o número de peças consecutivas (k) necessárias para vencer;
-3. Jogar contra o computador, que utiliza uma estratégia fácil, média ou difícil.
-   
+As alterações devem ser enviadas para o repositório remoto através de:
+
+```bash
+git add FP2425P1.py
+git commit -m "Descrição da alteração"
+git push
+```
+
+Cada `push` desencadeia uma nova avaliação automática do projeto.
+
+Os resultados dos testes podem ser consultados em:
+
+http://fp.rnl.tecnico.ulisboa.pt/fp24p1/reports/ist1114295/
+
+## Regras importantes
+
+* Não adicionar outros ficheiros `.py`.
+* Não adicionar ou remover ficheiros do repositório.
+* Não criar novas branches ou forks.
+* A solução deve estar apenas em `FP2425P1.py`.
+* Antes de trabalhar noutro computador, fazer `git pull` para sincronizar a versão local.
+
+## Configuração inicial do Git
+
+Caso ainda não esteja configurado:
+
+```bash
+git config --global user.name "O Seu Nome"
+git config --global user.email "o.seu.email@example.com"
+```
+
+A autenticação do GitLab deve ser feita através de uma **chave SSH**.
 
 
