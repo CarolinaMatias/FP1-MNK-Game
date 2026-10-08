@@ -1,51 +1,30 @@
-# FP2425P1 - ist1114295
+# MNK Game
 
-Projeto de **Fundamentos da Programação (FP)**.
+Python implementation of the generalized **(m, n, k)-game** (Tic-Tac-Toe / Gomoku generalization), developed for the Programming Fundamentals course at IST (2024/2025).
 
-## Estrutura
+## Overview
 
-O repositório deve conter apenas:
+Two players alternate placing pieces on an $m \times n$ board. The first to align $k$ consecutive pieces (horizontally, vertically, or diagonally) wins.
 
-```text
-FP2425P1.py
-README.md
-```
+- **Pieces**: `1` (`X`) for Black, `-1` (`O`) for White, `0` for empty.
+- **Order**: Black (`X`) plays first.
+- **Dependencies**: None (pure Python 3 standard library).
 
-A solução do projeto deve estar **inteiramente no ficheiro `FP2425P1.py`**.
+## AI Difficulties
 
-## Submissão
+- **Easy (`facil`)**: Plays adjacent to its own pieces if possible; otherwise picks any free spot.
+- **Normal (`normal`)**: Checks the longest sequence $L \le k$ either player can form. Plays to complete its own sequence or blocks the opponent.
+- **Hard (`dificil`)**: Checks immediate win/block for $k$. If none exists, simulates outcomes for all free positions using the *Normal* strategy and picks the path to victory/draw.
+- **Tie-breaker**: Always chooses the move closest to the center (Chebyshev distance).
 
-As alterações devem ser enviadas para o repositório remoto através de:
+## How to Run
 
-```bash
-git add FP2425P1.py
-git commit -m "Descrição da alteração"
-git push
-```
+```python
+from projeto import jogo_mnk
 
-Cada `push` desencadeia uma nova avaliação automática do projeto.
+# jogo_mnk((m, n, k), player_piece, difficulty)
+# player_piece: 1 (Black/X) or -1 (White/O)
+# difficulty: 'facil', 'normal', or 'dificil'
 
-Os resultados dos testes podem ser consultados em:
-
-http://fp.rnl.tecnico.ulisboa.pt/fp24p1/reports/ist1114295/
-
-## Regras importantes
-
-* Não adicionar outros ficheiros `.py`.
-* Não adicionar ou remover ficheiros do repositório.
-* Não criar novas branches ou forks.
-* A solução deve estar apenas em `FP2425P1.py`.
-* Antes de trabalhar noutro computador, fazer `git pull` para sincronizar a versão local.
-
-## Configuração inicial do Git
-
-Caso ainda não esteja configurado:
-
-```bash
-git config --global user.name "O Seu Nome"
-git config --global user.email "o.seu.email@example.com"
-```
-
-A autenticação do GitLab deve ser feita através de uma **chave SSH**.
-
-
+# Example: Tic-Tac-Toe against hard AI
+jogo_mnk((3, 3, 3), 1, 'dificil')
