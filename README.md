@@ -10,7 +10,7 @@ Two players alternate placing pieces on an $m \times n$ board. The first to alig
 - **Order**: Black (`X`) plays first.
 - **Dependencies**: None (pure Python 3 standard library).
 
-## AI Difficulties
+## Mode games
 
 - **Easy (`facil`)**: Plays adjacent to its own pieces if possible; otherwise picks any free spot.
 - **Normal (`normal`)**: Checks the longest sequence $L \le k$ either player can form. Plays to complete its own sequence or blocks the opponent.
